@@ -1,0 +1,16 @@
+[project]
+name = "de-zoomcamp"
+version = "0.1.0"
+description = "Homework submissions of Data Engineering cohort 2026 of DataTalksClub."
+authors = [
+    {name = "eveliinavesala",email = "eveliina.ves@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
