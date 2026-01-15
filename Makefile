@@ -25,7 +25,9 @@ help:
 # Docker commands
 .PHONY: docker-build
 docker-build:
+	cp pyproject.toml poetry.lock $(DOCKER_DIR)/
 	docker build -t $(IMAGE_NAME) $(DOCKER_DIR)
+	rm -f $(DOCKER_DIR)/pyproject.toml $(DOCKER_DIR)/poetry.lock
 
 .PHONY: docker-run
 docker-run:

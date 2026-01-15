@@ -4,6 +4,11 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install poetry
 
-CMD ["python"]
+COPY pyproject.toml poetry.lock /app/
+
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-root --no-interaction --no-ansi
+
+CMD ["/bin/bash"]
